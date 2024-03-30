@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+  color: #fff;
+  flex: 1;
+  padding-bottom: 70px;
+
+  .chatHeader {
+    background: #2b2838;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      & * {
+        list-style-type: none;
+      }
+    }
+    .avatar {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .userName {
+      h3 {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+  }
+  .chatContainer {
+    height: 100%;
+    padding: 0 20px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow: auto;
+    background: url("http://localhost:3000/backgroundChatContainer.webp");
+    background-size: cover;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .message {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+      overflow-wrap: break-word;
+      .content {
+        max-width: 40%;
+        display: flex;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 12px;
+        word-break: break-all;
+      }
+    }
+    .sended {
+      color: #fff;
+      justify-content: flex-end;
+      .content {
+        background: blue;
+      }
+    }
+    .recieved {
+      justify-content: flex-start;
+      .content {
+        background: #ae6464;
+      }
+    }
+  }
+}
