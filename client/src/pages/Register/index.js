@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import styles from "./Register.module.scss";
-import tdtuLogo from "../../image/output-onlinepngtools.png";
+
 import { RegisterRoute } from "../../utils/APIRoutes";
 
 function Register() {
@@ -83,11 +83,6 @@ function Register() {
     <div className={styles.register}>
       <form>
         <div className={styles.headingForm}>
-          <Link href="/">
-            <div className={styles.logo}>
-              <img src={tdtuLogo} alt="" />
-            </div>
-          </Link>
           <h1>Register</h1>
         </div>
         <input

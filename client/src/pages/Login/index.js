@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import styles from "./Login.module.scss";
-import tdtuLogo from "../../image/output-onlinepngtools.png";
 import { LoginRoute } from "../../utils/APIRoutes";
 
 function Login() {
@@ -62,11 +61,6 @@ function Login() {
     <div className={styles.register}>
       <form>
         <div className={styles.headingForm}>
-          <Link to="/">
-            <div className={styles.logo}>
-              <img src={tdtuLogo} alt="" />
-            </div>
-          </Link>
           <h1>Login</h1>
         </div>
         <input
@@ -89,8 +83,7 @@ function Login() {
           Nếu chưa có tài khoản
           <Link className={styles.link} to="/register">
             {" "}
-            đăng kí
-            {" "}
+            đăng kí{" "}
           </Link>
           tại đây!
         </p>
